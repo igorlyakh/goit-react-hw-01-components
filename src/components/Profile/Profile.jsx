@@ -6,7 +6,7 @@ import {
   InfoItem,
 } from './Profile.styled';
 
-export const Profile = ({
+const Profile = ({
   user: {
     avatar,
     username,
@@ -35,3 +35,5 @@ export const Profile = ({
     </UserProfile>
   );
 };
+
+export default Profile;
