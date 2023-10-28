@@ -1,15 +1,17 @@
-import { Avatar, List, ListItem, Status } from './FriendList.styled';
+import { List } from './FriendList.styled';
+import FriendListItem from './FriendListItem';
 
 const FriendList = ({ friends }) => {
   return (
     <List>
       {friends.map(item => {
         return (
-          <ListItem key={item.id}>
-            <Status $isOnline={item.isOnline}></Status>
-            <Avatar src={item.avatar} alt={item.name} />
-            <p>{item.name}</p>
-          </ListItem>
+          <FriendListItem
+            key={item.id}
+            isOnline={item.isOnline}
+            avatar={item.avatar}
+            name={item.name}
+          />
         );
       })}
     </List>

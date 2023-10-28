@@ -2,12 +2,12 @@ import {
   StatisticsItem,
   StatisticsList,
   StatisticsWrapper,
-} from './Statistics .styled';
+} from './Statistics.styled';
 
-const Statistics = ({ title = 'Upload stats', data }) => {
+const Statistics = ({ title, data }) => {
   return (
     <StatisticsWrapper>
-      <h2>{title}</h2>
+      {title && <h2>{title}</h2>}
       <StatisticsList>
         {data.map(item => {
           return (
